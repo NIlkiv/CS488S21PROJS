@@ -19,7 +19,7 @@ Byt = 0
 while 1:
    # start = time.time()
     # Create message
-    message = "Enter the lower case message: "
+    message = input("Enter the lower case message: ")
    # byte = bytes(message, 'utf-8')
     # Send message
     clientSocket.send(message.encode('utf-8'))
