@@ -4,13 +4,13 @@ import sys
 import pickle
 
 # Create server
-ServerName = sys.args()    #input("Enter Hostname ")
+ServerName = sys.argv()    #input("Enter Hostname ")
 if ServerName == 0 or ServerName == '':
     print("Error: missing or additional arguments")
     sys.exit()
 
 ServerIP = socket.gethostbyname(ServerName)
-ServerPort = sys.args()    #input("Enter Port from range 1024 - 65535: ") #takes in port
+ServerPort = sys.argv()    #input("Enter Port from range 1024 - 65535: ") #takes in port
 if ServerPort == '':
     print("Error: missing or additional arguments")
     sys.exit()
@@ -19,7 +19,7 @@ if int(ServerPort) < 1024 or int(ServerPort) > 65535:
     print(f"Port {ServerPort} out of range")
     sys.exit()
 
-sendTime = sys.args()      #input("Enter time in seconds ")
+sendTime = sys.argv()      #input("Enter time in seconds ")
 if sendTime == '':
     print("Error: missing or additional arguments")
     sys.exit()
